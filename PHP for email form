@@ -1,0 +1,53 @@
+<?php
+
+
+$to = "info@BBH.com";
+$subject = "BBH Contact Form";
+$message = "Customer name:    " . $_POST['name'] . "\r\n" .
+"firstname:            " . $_POST['firstname'] . "\r\n" .
+"lastname:         " . $_POST['lastname'] . "\r\n" . "\r\n" .
+"mailingaddress:   " . $_POST['mailingaddress'] . "\r\n" .
+"city:   " . $_POST['city'] . "\r\n" .
+"state:   " . $_POST['state'] . "\r\n" .
+"zipcode " . $_POST['zipcode'] . "\r\n" . "\r\n" .
+"email     " . $_POST['email'] . "\r\n" . "\r\n" .
+"Services Needed     " . $_POST['ServicesNeeded_0']. "\r\n" .
+"Services Needed     " . $_POST['ServicesNeeded_1']. "\r\n" .
+"Services Needed     " . $_POST['ServicesNeeded_2']. "\r\n" .
+"comments     " . $_POST['comments'] . "\r\n" . "\r\n" .
+
+$from = $_POST['email'];
+$headers = "From: $from" . "\r\n";
+mail($to,$subject,$message,$headers);
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Email_Contact_ us</title>
+<link href="BHHcss.css" rel="stylesheet" type="text/css" />
+<p>
+</head>
+
+
+<body class="container">
+<div class="header">
+  <img src="images/BH-logo.jpg" width="189" height="131" alt="BH Logo" /> <headerh1>Bob Backstrom's HorseShoeing</headerh1>
+</div>
+<div id="h-navbar"><a href="Home.html">Home </a>| <a href="Hoof_Care.html">Hoof Care </a>| <a href="Priciing.html">Pricing </a>| <a href="Horse _Tips.html">Horse Tips </a>| <a href="Events.html"> Events </a>| <a href="Horses_ For _Sale.html"> Horses For Sale</a> |<a href="Contact.html"> Contact</a><a href="Contact.html"></a>
+<!-- end .header --></div>
+
+<div class="main">
+ <div class="box1"> 
+ <?php   
+echo "<p><h2><left>Thank you For visiting our website!</left></h2></p>";
+echo "<p>We will respond to your email within 24 hours. Remember you can contact us by phone as well. 999-999-9999.</p>"
+?>
+<!--ends box1--></div>
+<!--ends main--></div>
+<!--end container--></div>
+</body>
+</html>
